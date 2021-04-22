@@ -31,6 +31,18 @@
 .app {
   margin: 0px;
   background-color: #2B4162;
-  height: 100vh;
-  width: 100vw;
-  overflow-x: hidden; }
+  overflow: hidden; }
+
+.home {
+  border: 5px solid #E0E0E2;
+  background-color: #FA9F42;
+  height: 100%;
+  margin: 15px; }
+  .home .menu {
+    background-color: #721817;
+    margin: 20px;
+    height: 95%;
+    color: #E0E0E2;
+    font-family: "Rock Salt", cursive; }
+  .home h1 {
+    text-align: center; }

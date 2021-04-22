@@ -1,0 +1,19 @@
+@import "variables";
+
+.home {
+  border: 5px solid $greywhite;
+  background-color: $yellow;
+  height: 100%;
+  margin: 15px;
+
+  .menu {
+    background-color: $red;
+    margin: 20px;
+    height: 95%;
+    color: $greywhite;
+    font-family: $titleFont;
+  }
+    h1 {
+      text-align: center;
+    }
+}
