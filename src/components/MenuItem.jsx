@@ -3,12 +3,12 @@ import React, { useState } from "react";
 import ToppingsModal from "./ToppingsModal";
 import "../scss/_menuItem.scss";
 
-const MenuItem = ({ item }) => {
+const MenuItem = ({ item, order, setOrder }) => {
   const { title, description, cost } = item;
 
   const addToOrderHandler = (cost) => {
     console.log("cost", cost);
-  }
+  };
 
   const [toppingsModal, setToppingsModal] = useState(false);
 
@@ -34,6 +34,8 @@ const MenuItem = ({ item }) => {
         setToppingsModal={setToppingsModal}
         toggleToppingsModal={toggleToppingsModal}
         item={item}
+        order={order}
+        setOrder={setOrder}
       />
     </div>
   );
