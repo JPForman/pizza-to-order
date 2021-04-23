@@ -33,6 +33,7 @@ const MenuItem = ({ item }) => {
         toppingsModal={toppingsModal}
         setToppingsModal={setToppingsModal}
         toggleToppingsModal={toggleToppingsModal}
+        item={item}
       />
     </div>
   );
