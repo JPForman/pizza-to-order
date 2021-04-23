@@ -6,7 +6,7 @@ import {
   Redirect,
 } from "react-router-dom";
 
-import Home from "./pages/Home";
+import MenuPage from "./pages/MenuPage";
 import Header from "./components/Header";
 import './scss/_app.scss'
 
@@ -17,7 +17,7 @@ const App = () => {
         <Header />
         <Switch>
           <Route path="/">
-            <Home />
+            <MenuPage />
           </Route>
           <Redirect to="/" />
         </Switch>

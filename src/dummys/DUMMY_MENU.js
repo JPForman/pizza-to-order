@@ -6,7 +6,7 @@ const Menu = [
   },
   {
     title: 'Veggie Delight',
-    description: 'Mushrooms, onions, spinach, green peppers, and olives ontop of our classic Cheezey. A veggie delight!',
+    description: 'Mushrooms, onions, spinach, green peppers, and olives ontop of our classic Mr. Cheezey. A veggie delight!',
     cost: 10,
   },
   {
