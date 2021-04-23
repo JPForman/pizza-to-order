@@ -4,7 +4,7 @@
   border: 5px solid $greywhite;
   background-color: $yellow;
   height: 100%;
-  margin: 15px;
+  margin: 35px;
 
   .menu {
     background-color: $red;
@@ -12,8 +12,14 @@
     height: 95%;
     color: $greywhite;
     font-family: $titleFont;
+    border-radius: 5px;
+    padding: 5px 20px;
   }
     h1 {
       text-align: center;
+    }
+    .content {
+      display: flex;
+      flex-direction: row;
     }
 }

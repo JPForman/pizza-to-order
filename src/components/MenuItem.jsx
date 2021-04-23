@@ -1,13 +1,19 @@
 import React from "react";
 
+import "../scss/_menuItem.scss"
+
 const MenuItem = ({ item }) => {
   const {title, description, cost} = item
 
+  const addToOrderHandler = (cost) => [
+    console.log("cost", cost)
+  ]
+
   return (
-    <div>
-      <h3>{title}</h3>
-      <h3>{description}</h3>
-      <h3>{cost}</h3>
+    <div className="menuItem">
+      <h3>{title} ${cost}</h3>
+      <p>{description}</p>
+      <p className="add-to-order" onClick={()=>{addToOrderHandler({cost})}}>add to order!</p>
     </div>
   );
 };

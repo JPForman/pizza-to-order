@@ -7,17 +7,17 @@ const Menu = [
   {
     title: 'Veggie Delight',
     description: 'Mushrooms, onions, spinach, green peppers, and olives ontop of our classic Mr. Cheezey. A veggie delight!',
-    cost: 10,
+    cost: 12,
   },
   {
     title: 'Supreme Being',
     description: 'Mushrooms, onions, green peppers, olives, and peperoni. Supremely supreme.',
-    cost: 10,
+    cost: 13,
   },
   {
     title: 'Aloha',
     description: 'Pineapple and Ham ontop of Mr. Cheezy. Aloho friends :)',
-    cost: 10,
+    cost: 14,
   }
 ]
 
