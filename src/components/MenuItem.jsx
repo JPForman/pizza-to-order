@@ -1,19 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 
-import "../scss/_menuItem.scss"
+import ToppingsModal from "./ToppingsModal";
+import "../scss/_menuItem.scss";
 
 const MenuItem = ({ item }) => {
-  const {title, description, cost} = item
+  const { title, description, cost } = item;
 
-  const addToOrderHandler = (cost) => [
-    console.log("cost", cost)
-  ]
+  const addToOrderHandler = (cost) => {
+    console.log("cost", cost);
+  }
+
+  const [toppingsModal, setToppingsModal] = useState(false);
+
+  const toggleToppingsModal = () => setToppingsModal(!toppingsModal);
 
   return (
     <div className="menuItem">
-      <h3>{title} ${cost}</h3>
+      <h3>
+        {title} ${cost}
+      </h3>
       <p>{description}</p>
-      <p className="add-to-order" onClick={()=>{addToOrderHandler({cost})}}>add to order!</p>
+      <p
+        className="add-to-order"
+        onClick={() => {
+          addToOrderHandler({ cost });
+          toggleToppingsModal();
+        }}
+      >
+        add to order!
+      </p>
+      <ToppingsModal
+        toppingsModal={toppingsModal}
+        setToppingsModal={setToppingsModal}
+        toggleToppingsModal={toggleToppingsModal}
+      />
     </div>
   );
 };

@@ -11,12 +11,12 @@ const MenuPage = () => {
       <div className="menu">
         <h1>Menu</h1>
         <div className="content">
-        <div>
-          {Menu.map((item) => (
-            <MenuItem item={item} />
-          ))}
-        </div>
-        <OrderSummary />
+          <div>
+            {Menu.map((item) => (
+              <MenuItem item={item} />
+            ))}
+          </div>
+          <OrderSummary />
         </div>
       </div>
     </div>
