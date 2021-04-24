@@ -7,6 +7,7 @@ import "../scss/_menuPage.scss";
 
 const MenuPage = () => {
   const [order, setOrder] = useState([]);
+  const [orderList, setOrderList] = useState([])
 
   return (
     <div className="home">
@@ -18,7 +19,7 @@ const MenuPage = () => {
               <MenuItem item={item} order={order} setOrder={setOrder} />
             ))}
           </div>
-          <OrderSummary order={order} />
+          <OrderSummary order={order} orderList={orderList} setOrderList={setOrderList}/>
         </div>
       </div>
     </div>

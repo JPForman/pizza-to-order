@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "../scss/_orderSummary.scss";
 
-const OrderSummary = ({ order }) => {
+const OrderSummary = ({ order, orderList, setOrderList }) => {
   const grandSum = (order) => {
     let total = 0;
     order.forEach((item) => {
@@ -10,6 +10,13 @@ const OrderSummary = ({ order }) => {
     });
     return total;
   };
+
+  
+
+  const placeOrderHandler = (order) => {
+    setOrderList([...orderList, order])
+    console.log('orderList', orderList);
+  }
 
   return (
     <div className="orderSummary">
@@ -34,6 +41,7 @@ const OrderSummary = ({ order }) => {
         <h3>Total</h3>
         <h5 >${grandSum(order)}</h5>
       </div>
+      <p className="place-order" onClick={()=>(placeOrderHandler(order))}>Place Order</p>
     </div>
   );
 };
