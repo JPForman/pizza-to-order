@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,13 +14,16 @@ import Header from "./components/Header";
 import './scss/_app.scss'
 
 const App = () => {
+
+  const [orderList, setOrderList] = useState([]);
+
   return (
     <div className="app">
       <Router>
         <Header />
         <Switch>
           <Route path="/" exact>
-            <MenuPage />
+            <MenuPage orderList={orderList} setOrderList={setOrderList} />
           </Route>
           <Route path='/about' exact>
             <AboutPage  />
@@ -29,7 +32,7 @@ const App = () => {
             <ContactPage />
           </Route>
           <Route path="/storeapp" exact>
-            <StoreApp />
+            <StoreApp orderList={orderList} setOrderList={setOrderList} />
           </Route>
           <Redirect to="/" />
         </Switch>

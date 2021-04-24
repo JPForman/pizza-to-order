@@ -8,13 +8,13 @@
   padding: 10px;
 
   .header-pic-1 {
-    height:: 100px;
+    height: 100px;
     align-self: center;
     margin-top: 5px;
     margin-bottom: 5px;
     border-radius: 5px;
   }
-  
+
   .header-pic-2 {
     border-radius: 5px;
     align-self: center;
@@ -53,20 +53,19 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    
+
     .link {
       text-decoration: none;
-    p {
-      color: $greywhite;
-      margin-top: 5px;
-      margin-bottom: -5px;
-      font-family: $titleFont;
-      font-size: 12px;
-      &:hover {
-        color: $yellow;
-      
+      p {
+        color: $greywhite;
+        margin-top: 5px;
+        margin-bottom: -5px;
+        font-family: $titleFont;
+        font-size: 12px;
+        &:hover {
+          color: $yellow;
+        }
       }
-    }
     }
   }
 }

@@ -1,0 +1,18 @@
+@import "variables";
+
+.store-app {
+  font-family: $titleFont;
+  text-align: center;
+  h2 {
+    margin: 15px;
+    color: $greywhite;
+  }
+  .phases {
+    display: flex;
+    flex-direction: row;
+    div {
+      width: 25%;
+      color: $yellow;
+    }
+  }
+}
