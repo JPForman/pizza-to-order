@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import "../scss/_orderSummary.scss";
 
-const OrderSummary = ({ order, orderList, setOrderList }) => {
+const OrderSummary = ({ order, setOrder, orderList, setOrderList }) => {
   const grandSum = (order) => {
     let total = 0;
     order.forEach((item) => {
@@ -15,6 +15,7 @@ const OrderSummary = ({ order, orderList, setOrderList }) => {
 
   const placeOrderHandler = (order) => {
     setOrderList([...orderList, order])
+    setOrder([])
     console.log('orderList', orderList);
   }
 

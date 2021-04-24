@@ -7,6 +7,9 @@ import {
 } from "react-router-dom";
 
 import MenuPage from "./pages/MenuPage";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
+import StoreApp from "./pages/StoreApp";
 import Header from "./components/Header";
 import './scss/_app.scss'
 
@@ -16,8 +19,17 @@ const App = () => {
       <Router>
         <Header />
         <Switch>
-          <Route path="/">
+          <Route path="/" exact>
             <MenuPage />
+          </Route>
+          <Route path='/about' exact>
+            <AboutPage  />
+          </Route>
+          <Route path="/contact" exact>
+            <ContactPage />
+          </Route>
+          <Route path="/storeapp" exact>
+            <StoreApp />
           </Route>
           <Redirect to="/" />
         </Switch>
