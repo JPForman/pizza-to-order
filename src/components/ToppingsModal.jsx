@@ -21,8 +21,6 @@ const ToppingsModal = ({
 
   const [toppings, setToppings] = useState([]);
 
-  
-
   const checkboxHandler = (topping) => {
     setToppings([...toppings, topping]);
   };
@@ -30,7 +28,6 @@ const ToppingsModal = ({
   const sumItemCost = (toppings) => {
     const totalItemCost = cost + toppings.length;
     return totalItemCost;
-    console.log("totalItemCost", totalItemCost);
   }
 
   const addToOrderHandler = () => {
@@ -46,7 +43,7 @@ const ToppingsModal = ({
     ]);
     
     toggleToppingsModal();
-    console.log("order", order);
+    setToppings([])
   };
 
   return (
