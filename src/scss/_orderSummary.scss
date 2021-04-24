@@ -7,8 +7,24 @@
   width: 20%;
   color: $black;
   padding: 10px;
+  font-size: 12px;
 
   .title {
     text-align: center;
   }
+  .pizza {
+    color: green;
+    margin-top: 20px;
+
+  }
+  .topping {
+    padding-left: 20px;
+  }
+  .total-container {
+    text-align: center;
+  }
+}
+
+.cost{
+  float: right;
 }

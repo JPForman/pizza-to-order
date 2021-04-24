@@ -27,6 +27,12 @@ const ToppingsModal = ({
     setToppings([...toppings, topping]);
   };
 
+  const sumItemCost = (toppings) => {
+    const totalItemCost = cost + toppings.length;
+    return totalItemCost;
+    console.log("totalItemCost", totalItemCost);
+  }
+
   const addToOrderHandler = () => {
     setOrder([
       ...order,
@@ -34,9 +40,11 @@ const ToppingsModal = ({
         pizza: title,
         toppings: toppings,
         cost: cost,
-        id: v4()
+        id: v4(),
+        totalItemCost: sumItemCost(toppings)
       },
     ]);
+    
     toggleToppingsModal();
     console.log("order", order);
   };
