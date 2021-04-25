@@ -1,6 +1,8 @@
-.App-logo {
-  border: 2px solid red;
-  width: 200px; }
+.app {
+  margin: 0px;
+  background-color: #2B4162;
+  overflow: hidden;
+  min-height: 100vh; }
 
 .header {
   text-align: center;
@@ -8,9 +10,18 @@
   background-color: #721817;
   color: #FA9F42;
   padding: 10px; }
-  .header .header-pizza {
-    height: 120px;
-    align-self: center; }
+  .header .header-pic-1 {
+    height: 100px;
+    align-self: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px; }
+  .header .header-pic-2 {
+    border-radius: 5px;
+    align-self: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 150px; }
   .header .title-container {
     display: flex;
     flex-direction: row;
@@ -22,27 +33,149 @@
       font-family: "Rock Salt", cursive;
       font-size: 50px;
       margin-bottom: 0px;
-      margin-top: 0px; }
+      margin-top: 15px; }
     .header .title-container .title-column h2 {
       font-family: "Rock Salt", cursive;
       font-size: 12px;
-      margin-top: -20px; }
+      margin-top: 5px; }
+  .header .link-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; }
+    .header .link-list .link {
+      text-decoration: none; }
+      .header .link-list .link p {
+        color: #E0E0E2;
+        margin-top: 5px;
+        margin-bottom: -5px;
+        font-family: "Rock Salt", cursive;
+        font-size: 12px; }
+        .header .link-list .link p:hover {
+          color: #FA9F42; }
 
-.app {
-  margin: 0px;
+.menuItem {
+  width: 95%;
   background-color: #2B4162;
-  overflow: hidden; }
+  border: 4px solid #FA9F42;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 20px;
+  position: relative; }
+  .menuItem h3 {
+    margin-bottom: 20px; }
+  .menuItem .add-to-order {
+    background-color: #E0E0E2;
+    color: #0B6E4F;
+    width: 20%;
+    border-radius: 5px;
+    text-align: center;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    margin: 0; }
+    .menuItem .add-to-order:hover {
+      cursor: pointer;
+      background-color: #0B6E4F;
+      color: #E0E0E2; }
 
 .home {
   border: 5px solid #E0E0E2;
   background-color: #FA9F42;
   height: 100%;
-  margin: 15px; }
+  margin: 35px; }
   .home .menu {
     background-color: #721817;
     margin: 20px;
     height: 95%;
     color: #E0E0E2;
-    font-family: "Rock Salt", cursive; }
+    font-family: "Rock Salt", cursive;
+    border-radius: 5px;
+    padding: 5px 20px; }
   .home h1 {
+    text-align: center;
+    margin: 15px; }
+  .home .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; }
+
+.orderSummary {
+  background-color: #E0E0E2;
+  border: #262626 4px solid;
+  border-radius: 5px;
+  width: 20%;
+  color: #262626;
+  padding: 10px;
+  font-size: 12px; }
+  .orderSummary .title {
     text-align: center; }
+  .orderSummary .pizza {
+    color: #0B6E4F;
+    margin-top: 20px; }
+  .orderSummary .topping {
+    padding-left: 20px; }
+  .orderSummary .total-container {
+    text-align: center; }
+  .orderSummary .place-order {
+    margin-top: 40px;
+    background-color: #FA9F42;
+    color: #262626;
+    border: 4px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center; }
+    .orderSummary .place-order:hover {
+      background-color: #721817;
+      color: #E0E0E2;
+      cursor: pointer; }
+
+.cost {
+  float: right; }
+
+.store-app {
+  font-family: "Rock Salt", cursive;
+  text-align: center; }
+  .store-app h2 {
+    margin: 15px;
+    color: #E0E0E2; }
+  .store-app .phases {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; }
+    .store-app .phases div {
+      color: #FA9F42;
+      width: 20vw;
+      margin-left: 0px;
+      margin-right: 0px; }
+      .store-app .phases div h3 {
+        margin-bottom: 20px; }
+
+.workflow-card {
+  border: 4px solid #262626;
+  background-color: #E0E0E2;
+  border-radius: 5px;
+  margin: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative; }
+  .workflow-card .pizza {
+    color: #262626;
+    font-size: 20px;
+    margin-bottom: 5px; }
+  .workflow-card .topping {
+    color: #0B6E4F; }
+  .workflow-card button:hover {
+    background-color: #721817;
+    color: #E0E0E2; }
+  .workflow-card .advance {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    font-size: 10px;
+    background-color: #FA9F42; }
+  .workflow-card .back {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    font-size: 10px;
+    background-color: #FA9F42; }

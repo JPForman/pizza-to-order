@@ -38,6 +38,7 @@ const ToppingsModal = ({
         toppings: toppings,
         cost: cost,
         id: v4(),
+        status: 1,
         totalItemCost: sumItemCost(toppings)
       },
     ]);
