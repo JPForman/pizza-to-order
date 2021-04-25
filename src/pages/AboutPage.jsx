@@ -6,8 +6,7 @@ const AboutPage = () => {
   return (
     <div className="about-container">
       <div className="about">
-        <h1>About Us</h1>
-        <p className="subtitle">Conscienscious Pizza</p>
+        <h1>Conscienscious Pizza</h1>
         <div className="content">
           <p>
             We believe in quality. Quality in our ingredients. Quality in our
@@ -19,6 +18,7 @@ const AboutPage = () => {
             alt="happy picture"
             className="happy-pic"
           />
+          <p>We source all of our produce locally from friendly people. We pay our employees a decent wage because we believe they are worth it :)</p>
         </div>
       </div>
     </div>

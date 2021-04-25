@@ -19,9 +19,6 @@
       text-align: center;
       margin: 25px;
     }
-    .subtitle {
-      text-align: center;
-    }
     .content {
       display: flex;
       flex-direction: column;
@@ -32,6 +29,7 @@
     .happy-pic {
       width: 30%;
       align-self: center;
+      margin-top: 30px;
       margin-bottom: 30px;
     }
 }
