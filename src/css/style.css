@@ -1,8 +1,64 @@
+.about-container {
+  border: 5px solid #E0E0E2;
+  background-color: #FA9F42;
+  height: 100%;
+  margin: 35px; }
+  .about-container .about {
+    background-color: #721817;
+    margin: 20px;
+    height: 95%;
+    color: #E0E0E2;
+    font-family: "Rock Salt", cursive;
+    border-radius: 5px;
+    padding: 5px 20px; }
+  .about-container h1 {
+    text-align: center;
+    margin: 25px; }
+  .about-container .content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-content: center; }
+  .about-container .happy-pic {
+    width: 30%;
+    align-self: center;
+    margin-top: 30px;
+    margin-bottom: 30px; }
+
 .app {
   margin: 0px;
   background-color: #2B4162;
   overflow: hidden;
   min-height: 100vh; }
+
+.about-container {
+  border: 5px solid #E0E0E2;
+  background-color: #FA9F42;
+  height: 100%;
+  margin: 35px; }
+  .about-container .about {
+    background-color: #721817;
+    margin: 20px;
+    height: 95%;
+    color: #E0E0E2;
+    font-family: "Rock Salt", cursive;
+    border-radius: 5px;
+    padding: 5px 20px; }
+  .about-container h1 {
+    text-align: center;
+    margin: 25px; }
+  .about-container .content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-content: center; }
+  .about-container .happy-pic {
+    width: 30%;
+    align-self: center;
+    margin-top: 30px;
+    margin-bottom: 30px; }
 
 .header {
   text-align: center;
