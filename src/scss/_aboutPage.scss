@@ -1,0 +1,37 @@
+@import "variables";
+
+.about-container {
+  border: 5px solid $greywhite;
+  background-color: $yellow;
+  height: 100%;
+  margin: 35px;
+
+  .about {
+    background-color: $red;
+    margin: 20px;
+    height: 95%;
+    color: $greywhite;
+    font-family: $titleFont;
+    border-radius: 5px;
+    padding: 5px 20px;
+  }
+    h1 {
+      text-align: center;
+      margin: 25px;
+    }
+    .subtitle {
+      text-align: center;
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content:center;
+      align-content: center;
+    }
+    .happy-pic {
+      width: 30%;
+      align-self: center;
+      margin-bottom: 30px;
+    }
+}

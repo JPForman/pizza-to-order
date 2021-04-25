@@ -9,31 +9,31 @@ const StoreApp = ({ orderList, setOrderList }) => {
   const [perfectingList, setPerfectingList] = useState(orderList);
   const [servingList, setServingList] = useState(orderList);
 
-  useEffect(() => {
-    return () => {
-      if (orderList.length === 1) {
-        setPreparingList(orderList[0].filter((el) => el.status === 1));
-      } else {
-        setPreparingList();
-      }
-      if (orderList.length === 2) {
-        setBakingList(orderList[0].filter((el) => el.status === 2));
-      } else {
-        setBakingList();
-      }
-      if (orderList.length === 3) {
-        setPerfectingList(orderList[0].filter((el) => el.status === 3));
-      } else {
-        setPerfectingList();
-      }
-      if (orderList.length === 4) {
-        setServingList(orderList[0].filter((el) => el.status === 4));
-      } else {
-        setServingList();
-      }
+  // useEffect(() => {
+  //   return () => {
+  //     if (orderList.length === 1) {
+  //       setPreparingList(orderList[0].filter((el) => el.status === 1));
+  //     } else {
+  //       setPreparingList();
+  //     }
+  //     if (orderList.length === 2) {
+  //       setBakingList(orderList[0].filter((el) => el.status === 2));
+  //     } else {
+  //       setBakingList();
+  //     }
+  //     if (orderList.length === 3) {
+  //       setPerfectingList(orderList[0].filter((el) => el.status === 3));
+  //     } else {
+  //       setPerfectingList();
+  //     }
+  //     if (orderList.length === 4) {
+  //       setServingList(orderList[0].filter((el) => el.status === 4));
+  //     } else {
+  //       setServingList();
+  //     }
 
-    };
-  }, [orderList]);
+  //   };
+  // }, [setOrderList()]);
 
   console.log(
     "preparingList",
