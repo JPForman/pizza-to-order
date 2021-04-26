@@ -1,0 +1,15 @@
+@import '_variables';
+
+.contact-footer {
+  background-color: $greywhite;
+  border: 4px solid black;
+  border-radius: 5px;
+  font-family: $titleFont;
+  margin: 0 35px 35px 35px;
+  text-align: right;
+  padding: 5px;
+  font-size: 10px;
+  p {
+    margin: 5px;
+  }
+}

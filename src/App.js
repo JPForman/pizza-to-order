@@ -11,10 +11,10 @@ import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import StoreApp from "./pages/StoreApp";
 import Header from "./components/Header";
-import './scss/_app.scss'
+import ContactFooter from "./components/ContactFooter";
+import "./scss/_app.scss";
 
 const App = () => {
-
   const [orderList, setOrderList] = useState([]);
 
   return (
@@ -25,8 +25,8 @@ const App = () => {
           <Route path="/" exact>
             <MenuPage orderList={orderList} setOrderList={setOrderList} />
           </Route>
-          <Route path='/about' exact>
-            <AboutPage  />
+          <Route path="/about" exact>
+            <AboutPage />
           </Route>
           <Route path="/contact" exact>
             <ContactPage />
@@ -36,6 +36,7 @@ const App = () => {
           </Route>
           <Redirect to="/" />
         </Switch>
+        <ContactFooter />
       </Router>
     </div>
   );
