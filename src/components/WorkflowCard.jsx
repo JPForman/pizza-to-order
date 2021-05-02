@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import "../scss/_workflowCard.scss";
 
@@ -13,6 +13,8 @@ const WorkflowCard = ({ za, orderList, setOrderList }) => {
 
     setOrderList(newOrderList) 
   };
+
+
 
   return (
     <div className="workflow-card">

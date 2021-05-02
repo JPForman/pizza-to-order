@@ -36,7 +36,7 @@ const App = () => {
           </Route>
           <Redirect to="/" />
         </Switch>
-        <ContactFooter />
+        <ContactFooter orderList={orderList} setOrderList={setOrderList}/>
       </Router>
     </div>
   );
