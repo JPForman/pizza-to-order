@@ -5,21 +5,13 @@ import "../scss/_workflowCard.scss";
 const WorkflowCard = ({ za, orderList, setOrderList }) => {
   const { pizza, toppings, pizzaId } = za;
 
-  const [phase, setPhase] = useState(1);
-
-  const advanceHandler = () => {
-    // const orderIndex = orderList.findIndex((t)=> t.orderId === )
-    setPhase(phase + 1);
+  const advanceHandler = (direction) => {
     const pizzaIndex = orderList.findIndex((pizza) => pizza.pizzaId === pizzaId)
 
     let newOrderList = [...orderList]
+    direction === 'adv' ? newOrderList[pizzaIndex].status += 1 : newOrderList[pizzaIndex].status -= 1
 
-    newOrderList[pizzaIndex].status += 1
     setOrderList(newOrderList) 
-
-    console.log("orderList=", orderList);
-    console.log("pizzaId=", pizzaId);
-    console.log("phase=", phase);
   };
 
   return (
@@ -32,7 +24,7 @@ const WorkflowCard = ({ za, orderList, setOrderList }) => {
       <button
         className="advance"
         onClick={() => {
-          advanceHandler(pizzaId);
+          advanceHandler('adv');
         }}
       >
         +
@@ -40,7 +32,7 @@ const WorkflowCard = ({ za, orderList, setOrderList }) => {
       <button
         className="back"
         onClick={() => {
-          advanceHandler(pizzaId);
+          advanceHandler('back');
         }}
       >
         -
