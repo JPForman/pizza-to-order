@@ -37,12 +37,11 @@ const ToppingsModal = ({
         pizza: title,
         toppings: toppings,
         cost: cost,
-        id: v4(),
+        pizzaId: v4(),
         status: 1,
         totalItemCost: sumItemCost(toppings)
       },
     ]);
-    
     toggleToppingsModal();
     setToppings([])
   };

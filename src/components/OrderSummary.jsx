@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { v4 } from "uuid";
 
 import "../scss/_orderSummary.scss";
 
@@ -11,13 +12,16 @@ const OrderSummary = ({ order, setOrder, orderList, setOrderList }) => {
     return total;
   };
 
-  
-
   const placeOrderHandler = (order) => {
-    setOrderList([...orderList, order])
-    setOrder([])
-    console.log('orderList', orderList);
-  }
+    // order.forEach((za) => {
+    setOrderList(...orderList, order);
+    console.log("order", order);
+    console.log("orderList", orderList);
+    // }
+    // setOrderList([...orderList, { order: order, orderId: v4() }]);
+
+    setOrder([]);
+  };
 
   return (
     <div className="orderSummary">
@@ -40,9 +44,11 @@ const OrderSummary = ({ order, setOrder, orderList, setOrderList }) => {
       ))}
       <div className="total-container">
         <h3>Total</h3>
-        <h5 >${grandSum(order)}</h5>
+        <h5>${grandSum(order)}</h5>
       </div>
-      <p className="place-order" onClick={()=>(placeOrderHandler(order))}>Place Order</p>
+      <p className="place-order" onClick={() => placeOrderHandler(order)}>
+        Place Order
+      </p>
     </div>
   );
 };

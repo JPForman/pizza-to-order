@@ -4,7 +4,6 @@ import WorkflowCard from "../components/WorkflowCard";
 import "../scss/_storeApp.scss";
 
 const StoreApp = ({ orderList, setOrderList }) => {
-
   if (orderList.length === 0) {
     return <h2>No Orders To Make :)</h2>;
   } else {
@@ -15,27 +14,39 @@ const StoreApp = ({ orderList, setOrderList }) => {
         <div className="phases">
           <div className="preparation">
             <h3>Preparing!</h3>
-            {orderList.map((order) =>
-                order.map((za) => za.status === 1 && <WorkflowCard za={za} />)
-              )}
+            {orderList.map((za) =>
+                  za.status === 1 && (
+                    <WorkflowCard za={za} orderList={orderList} setOrderList={setOrderList} />
+                  )
+              )
+            }
           </div>
           <div className="baking">
             <h3>Baking!</h3>
-            {orderList.map((order) =>
-                order.map((za) => za.status === 2 && <WorkflowCard za={za} />)
-              )}
+            {orderList.map((za) =>
+                  za.status === 2 && (
+                    <WorkflowCard za={za} orderList={orderList} setOrderList={setOrderList}/>
+                  )
+              )
+            }
           </div>
           <div className="perfecting">
             <h3>Perfecting!</h3>
-            {orderList.map((order) =>
-              order.map((za) => za.status === 3 && <WorkflowCard za={za} />)
-            )}
+            {orderList.map((za) =>
+                  za.status === 3 && (
+                    <WorkflowCard za={za} orderList={orderList} setOrderList={setOrderList}/>
+                  )
+              )
+            }
           </div>
           <div className="serving">
             <h3>Serving!</h3>
-            {orderList.map((order) =>
-              order.map((za) => za.status === 4 && <WorkflowCard za={za} />)
-            )}
+            {orderList.map((za) =>
+                  za.status === 4 && (
+                    <WorkflowCard za={za} orderList={orderList} setOrderList={setOrderList}/>
+                  )
+              )
+            }
           </div>
         </div>
       </div>
