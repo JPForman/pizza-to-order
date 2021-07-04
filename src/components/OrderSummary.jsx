@@ -13,12 +13,11 @@ const OrderSummary = ({ order, setOrder, orderList, setOrderList }) => {
   };
 
   const placeOrderHandler = (order) => {
-    // order.forEach((za) => {
-    setOrderList(...orderList, order);
+      order.forEach((za)=> {
+        setOrderList((orderList)=> {return [...orderList, za]});
+      })
     console.log("order", order);
     console.log("orderList", orderList);
-    // }
-    // setOrderList([...orderList, { order: order, orderId: v4() }]);
 
     setOrder([]);
   };

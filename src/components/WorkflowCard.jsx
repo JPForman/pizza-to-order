@@ -19,6 +19,7 @@ const WorkflowCard = ({ za, orderList, setOrderList }) => {
   return (
     <div className="workflow-card">
       <h2 className="pizza">{pizza}</h2>
+      <hr />
       {toppings.map((topping) => (
         <p className="topping">{topping}</p>
       ))}
