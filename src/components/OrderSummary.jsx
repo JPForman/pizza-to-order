@@ -3,7 +3,7 @@ import { v4 } from "uuid";
 
 import "../scss/_orderSummary.scss";
 
-const OrderSummary = ({ order, setOrder, orderList, setOrderList }) => {
+const OrderSummary = ({ order, setOrder, orderList, setOrderList, toggleFlash }) => {
   const grandSum = (order) => {
     let total = 0;
     order.forEach((item) => {
@@ -20,6 +20,7 @@ const OrderSummary = ({ order, setOrder, orderList, setOrderList }) => {
     console.log("orderList", orderList);
 
     setOrder([]);
+    toggleFlash()
   };
 
   return (
